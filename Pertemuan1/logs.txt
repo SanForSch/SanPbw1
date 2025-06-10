@@ -1,0 +1,19 @@
+-Create Folder pbw1 in htdocs
+-Create Folder pertemuan1
+-open using Folder vs code :
+    -file
+    -open Folder
+    -select the Folder
+-create new file :
+    -right click on the Folder
+    -new file
+    -index.html
+-learning about html tag and element
+-start apache on xampp
+-open in browser :
+    -using xampp : localhost
+    -open using file in directory : win+e, select file
+-create latihan.html :
+    -nim with tag h3
+    -nama with tag b
+    -fakultas, jurusan n konsentrasi using p tag

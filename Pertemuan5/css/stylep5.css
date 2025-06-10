@@ -1,0 +1,38 @@
+h3 {
+  color: red;
+}
+p {
+  color: blue;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  color: green;
+  text-decoration: none;
+}
+ol li {
+  color: red;
+}
+ul li {
+  color: #00ff00;
+  font-family: sans-serif;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  width: 100%;
+  border-collapse: collapse;
+}

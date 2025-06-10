@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respon 1</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .judul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1em;
+    }
+    .judul img {
+      width: 50px;
+      border-radius: 5em;
+    }
+    nav {
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+    }
+    ul li {
+      border: solid 1px black;
+      padding: 0.5em 1em;
+    }
+    ul li a {
+      text-decoration: none;
+      color: black;
+    }
+    header {
+      border: solid 1px black;
+      margin: 0em 2em;
+      margin-top: 0.5em;
+      padding: 1em;
+    }
+    main {
+      margin: 0em 2em;
+      border: solid 1px black;
+      padding: 1em;
+      margin-top: 0.5em;
+    }
+    footer {
+      border: solid 1px black;
+      margin: 0em 2em;
+      padding: 1em;
+      margin-top: 0.5em;
+    }
+    a:hover {
+      color: blue;
+      transition: 200ms all ease-in-out;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="judul">
+        <h1>Website San</h1>
+        <img
+          src="https://lms.stmik-wp.ac.id/uploads/photos/student/24/240/24.240.0028.JPG"
+          alt="Logo Website" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pendaftaran</a></li>
+          <li><a href="informasi.html">Informasi</a></li>
+          <li><a href="">Kontak Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <table width="100%">
+        <th align="left" id="kontak">Kontak Kami</th>
+        <tr>
+          <td><label for="nama">Nama</label></td>
+          <td>:</td>
+          <td>
+            <input
+              type="text"
+              name="nama"
+              id="nama"
+              placeholder="masukkan nama" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>:</td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ex: example@gmail.com" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pesan">Pesan</label></td>
+          <td>:</td>
+          <td>
+            <textarea
+              id="pesan"
+              name="pesan"
+              placeholder="Masukkan Pesan"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><button>Kirim pesan</button></td>
+        </tr>
+      </table>
+    </main>
+    <footer align="center">
+      <p>Tahun Ajaran 2024/2025</p>
+      <p>Muhammad Ichsan &copy; Copyright 2025</p>
+    </footer>
+  </body>
+</html>
