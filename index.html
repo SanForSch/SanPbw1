@@ -3,190 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PBW1</title>
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    }
-    header {
-      display: flex;
-      flex-direction: column;
-      background: rgb(78, 78, 255);
-      padding: 2em;
-    }
-    .judul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      justify-items: center;
-      align-items: center;
-    }
-    .judul img {
-      border-radius: 100%;
-      height: 7em;
-      width: 7em;
-    }
-    nav ul {
-      display: flex;
-      flex-direction: row;
-      gap: 2em;
-    }
-    nav ul a {
-      color: white;
-      padding: 1.3em;
-      background: rgb(0, 0, 144);
-      border-radius: 5em;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav ul a:hover {
-      background: white;
-      color: black;
-      transition: all;
-      transition-duration: 400ms;
-    }
-    nav {
-      margin-top: 3em;
-      margin-bottom: 2em;
-    }
-    main {
-      padding: 2em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      gap: 1em;
-    }
-    .information {
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-    aside {
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-    aside ul {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-    aside ul li a {
-      text-decoration: none;
-      font-weight: 500;
-      color: black;
-    }
-    aside ul li a:hover {
-      text-decoration: underline;
-      font-weight: 500;
-      color: blue;
-    }
-    footer p {
-      padding: 1em;
-      background: black;
-      color: white;
-      text-align: center;
-    }
-    @media screen and (max-width: 500px) {
-      main {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 2em;
+    <title>Ichsan - PBW1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .judul h1 {
-        font-size: 1.5rem;
-      }
-      .judul img {
-        height: 5rem;
-        width: 5rem;
-      }
-    }
-    .contact {
-      color: white;
-      padding: 1.3em;
-      background: rgb(7, 185, 7);
-      border-radius: 5em;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact:hover {
-      background: white;
-      color: black;
-      transition: all;
-      transition-duration: 400ms;
-    }
-  </style>
 
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f4f4f4;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 1rem 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background: #34495e;
+      }
+
+      .contact-btn {
+        background: #e74c3c;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .contact-btn:hover {
+        background: #c0392b;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+
+      .hero {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .skills {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .skill-tag {
+        background: #3498db;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .sidebar {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+      }
+
+      .sidebar h3 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 0.5rem;
+      }
+
+      .sidebar ul {
+        list-style: none;
+      }
+
+      .sidebar li {
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar a {
+        color: #666;
+        text-decoration: none;
+        display: block;
+        padding: 0.7rem 1rem;
+        border-radius: 5px;
+        transition: all 0.3s;
+        border-left: 3px solid transparent;
+      }
+
+      .sidebar a:hover {
+        background: #ecf0f1;
+        color: #2c3e50;
+        border-left-color: #3498db;
+      }
+
+      footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        nav ul {
+          gap: 1rem;
+        }
+
+        main {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .hero h2 {
+          font-size: 2rem;
+        }
+
+        .hero {
+          padding: 1.5rem;
+        }
+
+        .sidebar {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
   <body>
     <header>
-      <div class="judul">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8KD4tXh-QF_ftfE_E0oLiKycs-R2sBprcmw&s"
-          alt="Logo Iwima" />
+      <div class="header-content">
+        <div class="logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8KD4tXh-QF_ftfE_E0oLiKycs-R2sBprcmw&s"
+            alt="Logo Iwima" />
+          <h1>Ichsan</h1>
+        </div>
         <nav>
-          <ul type="none">
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Respon1_0028/index.html">Respon 1</a></li>
+            <li><a href="tugas4/index.html">Tugas 4</a></li>
           </ul>
         </nav>
-        <a href="#" class="contact">Contact me</a>
+        <a
+          href="https://www.instagram.com/k21t7/"
+          target="_blank"
+          class="contact-btn"
+          >Contact Me</a
+        >
       </div>
     </header>
-    <main>
-      <div class="information">
-        <p>hallo</p>
-      </div>
-      <aside>
-        <h1>Daftar Pertemuan</h1>
-        <ul type="none">
-          <li><a href="Pertemuan1/index.html">Pertemuan 1 - HTML</a></li>
-          <li><a href="Pertemuan2/index.html">Pertemuan 2 - Tag Table</a></li>
-          <li><a href="Pertemuan3/index.html">Pertemuan 3 - Tag Form</a></li>
-          <li>
-            <a href="Pertemuan4/index.html">Pertemuan 4 - Tag Audio Video </a>
-          </li>
-          <li>
-            <a href="Pertemuan5/index.html"
-              >Pertemuan 5 - Cascading Style Sheet
-            </a>
-          </li>
-          <li>
-            <a href="Pertemuan6/index.html"
-              >Pertemuan 6 - Cascading Style Sheet 2
-            </a>
-          </li>
-          <li>
-            <a href="Pertemuan8/index.html"
-              >Pertemuan 8 - Cascading Style Sheet 3</a
-            >
-          </li>
-          <li>
-            <a href="Pertemuan9/index.html">Pertemuan 9 - Bootstrap</a>
-          </li>
-          <li>
-            <a href="Pertemuan10/index.html">Pertemuan 10 - Javascript</a>
-          </li>
-          <li>
-            <a href="tugasJs/index.html">Pertemuan 11 (daring)</a>
-          </li>
-          <li>
-            <a href="Pertemuan12/pbw1-p12/">Pertemuan 12 - React JS</a>
-          </li>
-          <li>
-            <a href="Pertemuan13/pbw1-p13/public/index.htmls"
-              >Pertemuan 13 - Bootstrap React JS</a
-            >
-          </li>
-        </ul>
-      </aside>
-    </main>
+    <div class="container">
+      <main>
+        <div class="hero">
+          <h2>Hello, I'm Ichsan</h2>
+          <p>
+            Selamat datang di Website Praktikum Pemrograman Berbasis Web 1.
+            Berikut beberapa Tech Stack yang saya gunakan:
+          </p>
+          <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <h3>Learning Sessions</h3>
+          <ul>
+            <li><a href="Pertemuan1/index.html">Session 1 - HTML</a></li>
+            <li><a href="Pertemuan2/index.html">Session 2 - Tables</a></li>
+            <li><a href="Pertemuan3/index.html">Session 3 - Forms</a></li>
+            <li><a href="Pertemuan4/index.html">Session 4 - Media</a></li>
+            <li><a href="Pertemuan5/index.html">Session 5 - CSS Basics</a></li>
+            <li>
+              <a href="Pertemuan6/index.html">Session 6 - CSS Advanced</a>
+            </li>
+            <li><a href="Pertemuan8/index.html">Session 8 - CSS Layouts</a></li>
+            <li><a href="Pertemuan9/index.html">Session 9 - Bootstrap</a></li>
+            <li>
+              <a href="Pertemuan10/index.html">Session 10 - JavaScript</a>
+            </li>
+            <li><a href="tugasJs/index.html">Session 11 - Online</a></li>
+            <li><a href="Pertemuan12/pbw1-p12/">Session 12 - React</a></li>
+            <li>
+              <a href="Pertemuan13/pbw1-p13/">Session 13 - React Bootstrap</a>
+            </li>
+          </ul>
+        </aside>
+      </main>
+    </div>
     <footer>
-      <p>Muhammad Ichsan &copy;2025 Institut Widya Pratama</p>
+      <p>Muhammad Ichsan &copy; 2025 Institut Widya Pratama</p>
     </footer>
   </body>
 </html>
